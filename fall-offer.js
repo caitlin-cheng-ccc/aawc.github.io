@@ -3,6 +3,10 @@
     if (!dialog || typeof dialog.showModal !== 'function') return;
 
     var flyer = dialog.querySelector('.fall-offer-art img');
+    if (flyer) {
+        // The blurred side fill reuses whatever flyer the <img> points at
+        dialog.querySelector('.fall-offer-art').style.setProperty('--flyer', 'url("' + flyer.getAttribute('src') + '")');
+    }
     var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     var closing = false;
 
