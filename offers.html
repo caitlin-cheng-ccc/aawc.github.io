@@ -7,6 +7,26 @@
     <title>Offers — AAWC</title>
     <link rel="icon" type="image/png" href="images/favicon.png">
     <link href="vendor/fonts.css" rel="stylesheet">
+    <link rel="preload" as="image" href="images/does-happy-pay-do-credit-checks_92c1bc6f-33cd-481e-8890-b0f8721e53ec.webp" fetchpriority="high">
+    <style>
+        .hero-fade .treatments-hero-bg { opacity: 0; transition: opacity 900ms ease; }
+        .hero-fade .treatments-hero-bg.is-loaded { opacity: 1; }
+    </style>
+    <script>
+        // Fade the hero photo in once it has fully loaded instead of painting it top-to-bottom
+        document.documentElement.classList.add('hero-fade');
+        (function () {
+            var img = new Image();
+            var reveal = function () {
+                var bg = document.querySelector('.treatments-hero-bg');
+                if (bg) bg.classList.add('is-loaded');
+                else document.addEventListener('DOMContentLoaded', reveal);
+            };
+            img.onload = img.onerror = reveal;
+            img.src = 'images/does-happy-pay-do-credit-checks_92c1bc6f-33cd-481e-8890-b0f8721e53ec.webp';
+            setTimeout(reveal, 3000);
+        })();
+    </script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet" />
@@ -265,7 +285,7 @@
         .treatments-cta-bg {
             position: absolute;
             inset: 0;
-            background-image: url('images/ChatGPT Image Jul 26, 2026, 06_15_45 PM.png');
+            background-image: url('images/ChatGPT Image Jul 26, 2026, 06_15_45 PM.webp');
             background-size: cover;
             background-position: center;
             filter: brightness(0.35) saturate(1.2) contrast(1.1);

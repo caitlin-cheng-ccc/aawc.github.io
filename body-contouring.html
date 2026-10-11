@@ -7,6 +7,26 @@
     <title>Body Contouring — AAWC</title>
     <link rel="icon" type="image/png" href="images/favicon.png">
     <link href="vendor/fonts.css" rel="stylesheet">
+    <link rel="preload" as="image" href="images/ae-body-sculpting-3.jpeg" fetchpriority="high">
+    <style>
+        .hero-fade .treatments-hero-bg { opacity: 0; transition: opacity 900ms ease; }
+        .hero-fade .treatments-hero-bg.is-loaded { opacity: 1; }
+    </style>
+    <script>
+        // Fade the hero photo in once it has fully loaded instead of painting it top-to-bottom
+        document.documentElement.classList.add('hero-fade');
+        (function () {
+            var img = new Image();
+            var reveal = function () {
+                var bg = document.querySelector('.treatments-hero-bg');
+                if (bg) bg.classList.add('is-loaded');
+                else document.addEventListener('DOMContentLoaded', reveal);
+            };
+            img.onload = img.onerror = reveal;
+            img.src = 'images/ae-body-sculpting-3.jpeg';
+            setTimeout(reveal, 3000);
+        })();
+    </script>
     <style>
         *, *::before, *::after { box-sizing: border-box; }
 
@@ -444,7 +464,7 @@
         .treatments-cta-bg {
             position: absolute;
             inset: 0;
-            background-image: url('images/ChatGPT Image Jul 26, 2026, 06_15_45 PM.png');
+            background-image: url('images/ChatGPT Image Jul 26, 2026, 06_15_45 PM.webp');
             background-size: cover;
             background-position: center;
             filter: brightness(0.35) saturate(1.2) contrast(1.1);
@@ -575,7 +595,7 @@
     <section class="treatments-section">
         <div class="benefits-block">
             <div class="benefits-block-img-frame">
-                <img class="benefits-block-img" src="images/ae-body-sculpting-hero.jpeg" alt="Body Contouring">
+                <img class="benefits-block-img" loading="lazy" decoding="async" src="images/ae-body-sculpting-hero.jpeg" alt="Body Contouring">
             </div>
             <div class="benefits-copy">
                 <h2 class="benefits-copy-heading">Why Choose Body Contouring<span class="benefits-heading-underline"></span></h2>
@@ -588,7 +608,7 @@
     <!-- Treatment Technologies -->
     <section class="treatments-section" style="padding-top: 60px;">
         <div class="treatment-block treatment-block-reverse">
-            <img class="treatment-block-img treatment-block-img--matched" src="images/woman-close-up-abs.webp" alt="Emsculpt NEO">
+            <img class="treatment-block-img treatment-block-img--matched" loading="lazy" decoding="async" src="images/woman-close-up-abs.webp" alt="Emsculpt NEO">
             <div class="treatment-block-body">
                 <p class="treatment-block-tag">Build Muscle · Burn Fat</p>
                 <h2 class="treatment-block-name">Emsculpt NEO</h2>
@@ -597,7 +617,7 @@
         </div>
 
         <div class="treatment-block">
-            <img class="treatment-block-img treatment-block-img--matched" src="images/ae-body-sculpting-2.jpeg" alt="T Shape 2">
+            <img class="treatment-block-img treatment-block-img--matched" loading="lazy" decoding="async" src="images/ae-body-sculpting-2.jpeg" alt="T Shape 2">
             <div class="treatment-block-body">
                 <p class="treatment-block-tag">Tighten · Smooth · Refine</p>
                 <h2 class="treatment-block-name">T Shape 2</h2>

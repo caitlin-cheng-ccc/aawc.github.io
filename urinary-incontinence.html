@@ -7,6 +7,26 @@
     <title>Urinary Incontinence — AAWC</title>
     <link rel="icon" type="image/png" href="images/favicon.png">
     <link href="vendor/fonts.css" rel="stylesheet">
+    <link rel="preload" as="image" href="images/emsella.webp" fetchpriority="high">
+    <style>
+        .hero-fade .treatments-hero-bg { opacity: 0; transition: opacity 900ms ease; }
+        .hero-fade .treatments-hero-bg.is-loaded { opacity: 1; }
+    </style>
+    <script>
+        // Fade the hero photo in once it has fully loaded instead of painting it top-to-bottom
+        document.documentElement.classList.add('hero-fade');
+        (function () {
+            var img = new Image();
+            var reveal = function () {
+                var bg = document.querySelector('.treatments-hero-bg');
+                if (bg) bg.classList.add('is-loaded');
+                else document.addEventListener('DOMContentLoaded', reveal);
+            };
+            img.onload = img.onerror = reveal;
+            img.src = 'images/emsella.webp';
+            setTimeout(reveal, 3000);
+        })();
+    </script>
     <style>
         *, *::before, *::after { box-sizing: border-box; }
 
@@ -97,7 +117,7 @@
         .treatments-hero-bg {
             position: absolute;
             inset: 0;
-            background-image: url('images/emsella.jpeg');
+            background-image: url('images/emsella.webp');
             background-size: cover;
             background-position: center;
             filter: brightness(0.6);
@@ -406,7 +426,7 @@
         .treatments-cta-bg {
             position: absolute;
             inset: 0;
-            background-image: url('images/ChatGPT Image Jul 26, 2026, 06_15_45 PM.png');
+            background-image: url('images/ChatGPT Image Jul 26, 2026, 06_15_45 PM.webp');
             background-size: cover;
             background-position: center;
             filter: brightness(0.35) saturate(1.2) contrast(1.1);
@@ -534,7 +554,7 @@
     <!-- What Is Emsella -->
     <section class="treatments-section">
         <div class="treatment-block">
-            <img class="treatment-block-img" src="images/BTL_Emsella_PIC_Chair-model_1894-1.jpg" alt="Emsella">
+            <img class="treatment-block-img" loading="lazy" decoding="async" src="images/BTL_Emsella_PIC_Chair-model_1894-1.jpg" alt="Emsella">
             <div class="treatment-block-body">
                 <p class="treatment-block-tag">Pelvic Floor Therapy</p>
                 <h2 class="treatment-block-name">What Is Emsella?</h2>

@@ -7,6 +7,26 @@
     <title>About Us — AAWC</title>
     <link rel="icon" type="image/png" href="images/favicon.png">
     <link href="vendor/fonts.css" rel="stylesheet">
+    <link rel="preload" as="image" href="images/hero.jpeg" fetchpriority="high">
+    <style>
+        .hero-fade .treatments-hero-bg { opacity: 0; transition: opacity 900ms ease; }
+        .hero-fade .treatments-hero-bg.is-loaded { opacity: 1; }
+    </style>
+    <script>
+        // Fade the hero photo in once it has fully loaded instead of painting it top-to-bottom
+        document.documentElement.classList.add('hero-fade');
+        (function () {
+            var img = new Image();
+            var reveal = function () {
+                var bg = document.querySelector('.treatments-hero-bg');
+                if (bg) bg.classList.add('is-loaded');
+                else document.addEventListener('DOMContentLoaded', reveal);
+            };
+            img.onload = img.onerror = reveal;
+            img.src = 'images/hero.jpeg';
+            setTimeout(reveal, 3000);
+        })();
+    </script>
     <style>
         *, *::before, *::after { box-sizing: border-box; }
 

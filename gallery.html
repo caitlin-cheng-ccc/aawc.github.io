@@ -7,6 +7,26 @@
     <title>Gallery — AAWC</title>
     <link rel="icon" type="image/png" href="images/favicon.png">
     <link href="vendor/fonts.css" rel="stylesheet">
+    <link rel="preload" as="image" href="images/ChatGPT Image Jul 26, 2026, 08_48_39 PM.webp" fetchpriority="high">
+    <style>
+        .hero-fade .treatments-hero-bg { opacity: 0; transition: opacity 900ms ease; }
+        .hero-fade .treatments-hero-bg.is-loaded { opacity: 1; }
+    </style>
+    <script>
+        // Fade the hero photo in once it has fully loaded instead of painting it top-to-bottom
+        document.documentElement.classList.add('hero-fade');
+        (function () {
+            var img = new Image();
+            var reveal = function () {
+                var bg = document.querySelector('.treatments-hero-bg');
+                if (bg) bg.classList.add('is-loaded');
+                else document.addEventListener('DOMContentLoaded', reveal);
+            };
+            img.onload = img.onerror = reveal;
+            img.src = 'images/ChatGPT Image Jul 26, 2026, 08_48_39 PM.webp';
+            setTimeout(reveal, 3000);
+        })();
+    </script>
     <style>
         *, *::before, *::after { box-sizing: border-box; }
 
@@ -97,7 +117,7 @@
         .treatments-hero-bg {
             position: absolute;
             inset: 0;
-            background-image: url('images/ChatGPT Image Jul 26, 2026, 08_48_39 PM.png');
+            background-image: url('images/ChatGPT Image Jul 26, 2026, 08_48_39 PM.webp');
             background-size: cover;
             background-position: center 25%;
             filter: brightness(0.6);
@@ -362,18 +382,18 @@
         </div>
 
         <div class="gallery-photo-grid" id="gallery-photo-grid">
-            <img class="gallery-grid-photo" src="images/1000144123 (1).png" alt="Emsculpt NEO Results 1">
-            <img class="gallery-grid-photo" src="images/Collage_2025-02-28_10_24_21+(1).jpg.jpeg" alt="Emsculpt NEO Results 2">
-            <img class="gallery-grid-photo" src="images/Collage_2025-02-28_10_25_38+(1).jpg.jpeg" alt="Emsculpt NEO Results 3">
-            <img class="gallery-grid-photo" src="images/Collage_2025-03-08_11_02_33+(1).jpg.jpeg" alt="Emsculpt NEO Results 4">
-            <img class="gallery-grid-photo" src="images/Collage_2025-11-21_10_07_47+(1).jpg.jpeg" alt="Emsculpt NEO Results 5">
-            <img class="gallery-grid-photo" src="images/Collage_2025-11-21_10_15_50+(1).jpg.jpeg" alt="Emsculpt NEO Results 6">
-            <img class="gallery-grid-photo" src="images/emsculpt img 10.jpg" alt="Emsculpt NEO Results 7">
-            <img class="gallery-grid-photo" src="images/emsculpt img 11.jpg" alt="Emsculpt NEO Results 8">
-            <img class="gallery-grid-photo" src="images/emsculpt img 12.png" alt="Emsculpt NEO Results 9">
-            <img class="gallery-grid-photo" src="images/emsculpt img 13.png" alt="Emsculpt NEO Results 10">
-            <img class="gallery-grid-photo" src="images/emsculpt img 14.jpg" alt="Emsculpt NEO Results 11">
-            <img class="gallery-grid-photo" src="images/emsculpt img 15.png" alt="Emsculpt NEO Results 12">
+            <img class="gallery-grid-photo" loading="lazy" decoding="async" src="images/1000144123 (1).webp" alt="Emsculpt NEO Results 1">
+            <img class="gallery-grid-photo" loading="lazy" decoding="async" src="images/Collage_2025-02-28_10_24_21+(1).webp" alt="Emsculpt NEO Results 2">
+            <img class="gallery-grid-photo" loading="lazy" decoding="async" src="images/Collage_2025-02-28_10_25_38+(1).webp" alt="Emsculpt NEO Results 3">
+            <img class="gallery-grid-photo" loading="lazy" decoding="async" src="images/Collage_2025-03-08_11_02_33+(1).jpg.jpeg" alt="Emsculpt NEO Results 4">
+            <img class="gallery-grid-photo" loading="lazy" decoding="async" src="images/Collage_2025-11-21_10_07_47+(1).jpg.jpeg" alt="Emsculpt NEO Results 5">
+            <img class="gallery-grid-photo" loading="lazy" decoding="async" src="images/Collage_2025-11-21_10_15_50+(1).jpg.jpeg" alt="Emsculpt NEO Results 6">
+            <img class="gallery-grid-photo" loading="lazy" decoding="async" src="images/emsculpt img 10.webp" alt="Emsculpt NEO Results 7">
+            <img class="gallery-grid-photo" loading="lazy" decoding="async" src="images/emsculpt img 11.webp" alt="Emsculpt NEO Results 8">
+            <img class="gallery-grid-photo" loading="lazy" decoding="async" src="images/emsculpt img 12.webp" alt="Emsculpt NEO Results 9">
+            <img class="gallery-grid-photo" loading="lazy" decoding="async" src="images/emsculpt img 13.webp" alt="Emsculpt NEO Results 10">
+            <img class="gallery-grid-photo" loading="lazy" decoding="async" src="images/emsculpt img 14.webp" alt="Emsculpt NEO Results 11">
+            <img class="gallery-grid-photo" loading="lazy" decoding="async" src="images/emsculpt img 15.webp" alt="Emsculpt NEO Results 12">
         </div>
     </section>
 
@@ -499,29 +519,29 @@
         // Gallery tab switching
         const photoSets = {
             emsculpt: [
-                { src: "images/1000144123 (1).png", alt: 'Emsculpt NEO Results 1' },
-                { src: 'images/Collage_2025-02-28_10_24_21+(1).jpg.jpeg', alt: 'Emsculpt NEO Results 2' },
-                { src: 'images/Collage_2025-02-28_10_25_38+(1).jpg.jpeg', alt: 'Emsculpt NEO Results 3' },
+                { src: "images/1000144123 (1).webp", alt: 'Emsculpt NEO Results 1' },
+                { src: 'images/Collage_2025-02-28_10_24_21+(1).webp', alt: 'Emsculpt NEO Results 2' },
+                { src: 'images/Collage_2025-02-28_10_25_38+(1).webp', alt: 'Emsculpt NEO Results 3' },
                 { src: 'images/Collage_2025-03-08_11_02_33+(1).jpg.jpeg', alt: 'Emsculpt NEO Results 4' },
                 { src: 'images/Collage_2025-11-21_10_07_47+(1).jpg.jpeg', alt: 'Emsculpt NEO Results 5' },
                 { src: 'images/Collage_2025-11-21_10_15_50+(1).jpg.jpeg', alt: 'Emsculpt NEO Results 6' },
-                { src: 'images/emsculpt img 10.jpg', alt: 'Emsculpt NEO Results 7' },
-                { src: 'images/emsculpt img 11.jpg', alt: 'Emsculpt NEO Results 8' },
-                { src: 'images/emsculpt img 12.png', alt: 'Emsculpt NEO Results 9' },
-                { src: 'images/emsculpt img 13.png', alt: 'Emsculpt NEO Results 10' },
-                { src: 'images/emsculpt img 14.jpg', alt: 'Emsculpt NEO Results 11' },
-                { src: 'images/emsculpt img 15.png', alt: 'Emsculpt NEO Results 12' },
+                { src: 'images/emsculpt img 10.webp', alt: 'Emsculpt NEO Results 7' },
+                { src: 'images/emsculpt img 11.webp', alt: 'Emsculpt NEO Results 8' },
+                { src: 'images/emsculpt img 12.webp', alt: 'Emsculpt NEO Results 9' },
+                { src: 'images/emsculpt img 13.webp', alt: 'Emsculpt NEO Results 10' },
+                { src: 'images/emsculpt img 14.webp', alt: 'Emsculpt NEO Results 11' },
+                { src: 'images/emsculpt img 15.webp', alt: 'Emsculpt NEO Results 12' },
             ],
             tshape: [
                 { src: 'images/B&A_1 TREATMENT_ARMS.jpg', alt: 'T Shape 2 Results 1' },
-                { src: 'images/Legs_4.jpg', alt: 'T Shape 2 Results 2' },
-                { src: 'images/After 3 treatments.jpg', alt: 'T Shape 2 Results 3' },
-                { src: 'images/After 10 treatments.jpg', alt: 'T Shape 2 Results 4' },
-                { src: 'images/1000104531.png.webp', alt: 'T Shape 2 Results 5' },
-                { src: 'images/1000104533.png.webp', alt: 'T Shape 2 Results 6' },
-                { src: 'images/1000133501.png.webp', alt: 'T shape 2 Results 7' },
-                { src: 'images/2 treatments.jpg', alt: 'T Shape 2 Results 8' },
-                { src: 'images/IMG_9266.PNG', alt: 'T Shape 2 Results 9' },
+                { src: 'images/Legs_4.webp', alt: 'T Shape 2 Results 2' },
+                { src: 'images/After 3 treatments.webp', alt: 'T Shape 2 Results 3' },
+                { src: 'images/After 10 treatments.webp', alt: 'T Shape 2 Results 4' },
+                { src: 'images/1000104531.webp', alt: 'T Shape 2 Results 5' },
+                { src: 'images/1000104533.webp', alt: 'T Shape 2 Results 6' },
+                { src: 'images/1000133501.webp', alt: 'T shape 2 Results 7' },
+                { src: 'images/2 treatments.webp', alt: 'T Shape 2 Results 8' },
+                { src: 'images/IMG_9266.webp', alt: 'T Shape 2 Results 9' },
             ],
         };
         const galleryGrid = document.getElementById('gallery-photo-grid');
@@ -540,12 +560,16 @@
                         photos.forEach((photo) => {
                             const img = document.createElement('img');
                             img.className = 'gallery-grid-photo';
+                            img.decoding = 'async';
                             img.src = photo.src;
                             img.alt = photo.alt;
                             galleryGrid.appendChild(img);
+                            // Fade each photo in once it has fully decoded instead of painting it top-to-bottom
+                            gsap.set(img, { opacity: 0 });
+                            (img.decode ? img.decode() : Promise.resolve())
+                                .catch(() => {})
+                                .then(() => gsap.to(img, { opacity: 1, duration: 0.35 }));
                         });
-                        gsap.set(galleryGrid.querySelectorAll('.gallery-grid-photo'), { opacity: 0 });
-                        gsap.to(galleryGrid.querySelectorAll('.gallery-grid-photo'), { opacity: 1, duration: 0.35 });
                     }
                 });
             });
@@ -554,6 +578,12 @@
         // Off-screen at load, so its setup is pushed off the critical
         // first-paint/first-scroll path and onto the browser's idle time.
         const scheduleIdle = window.requestIdleCallback || ((cb) => setTimeout(cb, 1));
+
+        // Warm the cache with every tab's photos once the page is idle, so switching tabs is instant
+        window.addEventListener('load', () => scheduleIdle(() => {
+            Object.values(photoSets).forEach((set) => set.forEach((photo) => { new Image().src = photo.src; }));
+        }));
+
         scheduleIdle(() => {
             // CTA banner fade in
             gsap.set('.treatments-cta', { opacity: 0 });
