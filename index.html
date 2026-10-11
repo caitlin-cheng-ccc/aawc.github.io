@@ -7,6 +7,8 @@
     <title> Abington Aesthetics and Wellness Center </title>
     <link rel="icon" type="image/png" href="images/favicon.png">
     <link href="vendor/fonts.css" rel="stylesheet">
+    <link rel="preload" as="image" href="images/1000282031.webp" fetchpriority="high">
+    <link rel="preload" as="image" href="images/ChatGPT Image Aug 24, 2026, 11_08_14 AM.webp" fetchpriority="high">
     <style>
         html, body {
             font-family: 'Cinzel', serif;
@@ -31,6 +33,11 @@
             height: 100vh;
             object-fit: cover;
             filter: brightness(0.7);
+            opacity: 0;
+            transition: opacity 900ms ease;
+        }
+        .coverimg.is-loaded {
+            opacity: 1;
         }
 
         .navbar {
@@ -657,7 +664,7 @@
                 <h2 id="fall-offer-title">Fall Transformation Special</h2>
             </div>
             <div class="fall-offer-art">
-                <img src="images/1000282031.png" alt="Fall in love with you: T-Shape 2 fall transformation special with 6, 12, and 18 session packages for sculpting, smoothing, toning, and tightening." id="fall-offer-description">
+                <img src="images/1000282031.webp" width="1024" height="1536" alt="Fall in love with you: T-Shape 2 fall transformation special with 6, 12, and 18 session packages for sculpting, smoothing, toning, and tightening." id="fall-offer-description">
             </div>
             <div class="fall-offer-footer">
                 <a class="fall-offer-book" href="https://practice.chirotouch.com/portal/comprehensiveChiropracticandRehabInc" target="_blank" rel="noopener noreferrer">
@@ -671,7 +678,7 @@
             </div>
         </div>
     </dialog>
-    <img src="images/ChatGPT Image Aug 24, 2026, 11_08_14 AM.png" alt="Cover Image" class="coverimg">
+    <img src="images/ChatGPT Image Aug 24, 2026, 11_08_14 AM.webp" alt="Cover Image" class="coverimg" fetchpriority="high" onload="this.classList.add('is-loaded')" onerror="this.classList.add('is-loaded')">
     <nav class="navbar" id="main-navbar">
         <a href="index.html" style="display:inline-flex;align-items:center;padding:0;"><img src="images/Asset+6.png" id="navbar-logo" alt="AWC Logo" style="width: 100px; height: auto; margin: 20px;"></a>
         <ul class="nav-links">
@@ -697,7 +704,7 @@
     </section>
     <section style="padding: 50px; text-align: left;">
         <div class="slide-in-bottom">
-            <img src="images/ChatGPT+Image+May+22_2C+2026+at+01_10_01+PM.png" alt="Stock ChatGPT" width="1500" height="1000" style="float: right; width: 100%; max-width: 800px; height: auto; aspect-ratio: 3 / 2; margin-bottom: 20px; display: block; margin-left: auto;">
+            <img src="images/ChatGPT+Image+May+22_2C+2026+at+01_10_01+PM.webp" alt="Stock ChatGPT" width="1500" height="1000" style="float: right; width: 100%; max-width: 800px; height: auto; aspect-ratio: 3 / 2; margin-bottom: 20px; display: block; margin-left: auto;">
             <h5 style="color: #2F2738; font-size: 2em; margin-bottom: 20px; font-family: 'Saira', sans-serif;">Your Body, Your Goals</h5>
             <h1 style="color: #2F2738; font-size: 2.5em; margin-bottom: 20px;">Start Your Journey</h1>
             <p style="color: #3A3E45; font-size: 1.2em; max-width: 600px; line-height: 1.6;">Feel stronger and more confident with advanced body sculpting at AAWC.</p>
@@ -710,7 +717,7 @@
     </section>
 
     <section class="hero-band slide-in-bottom">
-        <img src="images/ChatGPT Image Jul 25, 2026, 11_56_09 PM.png" alt="Stock ChatGPT">
+        <img src="images/ChatGPT Image Jul 25, 2026, 11_56_09 PM.webp" alt="Stock ChatGPT">
     </section>
 
     <section class="fade-in" style="padding: 60px 50px 20px; text-align: center;">
@@ -721,19 +728,19 @@
         <div class="slideshow-wrapper">
             <div class="slideshow-track">
                 <div class="mySlides">
-                    <img src="images/row-1-column-3.png" alt="Emsculpt Neo">
+                    <img src="images/row-1-column-3.webp" alt="Emsculpt Neo">
                     <div class="slide-text">
                         <a href="body-contouring.html" class="slide-btn">Learn More</a>
                     </div>
                 </div>
                 <div class="mySlides">
-                    <img src="images/row-1-column-2.png" alt="Emsella">
+                    <img src="images/row-1-column-2.webp" alt="Emsella">
                     <div class="slide-text">
                         <a href="urinary-incontinence.html" class="slide-btn">Learn More</a>
                     </div>
                 </div>
                 <div class="mySlides">
-                    <img src="images/row-1-column-1.png" alt="T-shape 2">
+                    <img src="images/row-1-column-1.webp" alt="T-shape 2">
                     <div class="slide-text">
                         <a href="body-contouring.html" class="slide-btn">Learn More</a>
                     </div>
@@ -767,7 +774,7 @@
         <div class="staff-list">
 
             <div class="staff-card">
-                <img class="staff-photo" src="images/480610210_1164124525715499_8280883702688299265_n.jpg.webp" alt="Staff member">
+                <img class="staff-photo" loading="lazy" decoding="async" src="images/480610210_1164124525715499_8280883702688299265_n.jpg.webp" alt="Staff member">
                 <div class="staff-info">
                     <h3 class="staff-name">Dr. Mike Cheng</h3>
                     <p class="staff-title">Clinical Director</p>
@@ -777,7 +784,7 @@
             </div>
 
             <div class="staff-card">
-                <img class="staff-photo" src="images/IMG_4454.JPG.webp" alt="Staff member">
+                <img class="staff-photo" loading="lazy" decoding="async" src="images/IMG_4454.JPG.webp" alt="Staff member">
                 <div class="staff-info">
                     <h3 class="staff-name">Jessica Spears</h3>
                     <p class="staff-title">Aesthetic & Wellness Specialist</p>
@@ -789,7 +796,7 @@
             </div>
 
             <div class="staff-card">
-                <img class="staff-photo" src="images/stephanie.webp" alt="Staff member">
+                <img class="staff-photo" loading="lazy" decoding="async" src="images/stephanie.webp" alt="Staff member">
                 <div class="staff-info">
                     <h3 class="staff-name">Stephanie Wang</h3>
                     <p class="staff-title">Aesthetic Technician</p>
@@ -800,7 +807,7 @@
 
             <!--
             <div class="staff-card">
-                <img class="staff-photo" src="images/Allyson.png" alt="Staff member">
+                <img class="staff-photo" loading="lazy" decoding="async" src="images/Allyson.webp" alt="Staff member">
                 <div class="staff-info">
                     <h3 class="staff-name">Allyson Asnes</h3>
                     <p class="staff-title">Aesthetic Consultant</p>
@@ -812,7 +819,7 @@
 
             <!--
             <div class="staff-card">
-                <img class="staff-photo" src="images/Ruby.png" alt="Staff member">
+                <img class="staff-photo" loading="lazy" decoding="async" src="images/Ruby.webp" alt="Staff member">
                 <div class="staff-info">
                     <h3 class="staff-name">Ruby</h3>
                     <p class="staff-title">Assistant Aesthetician</p>
