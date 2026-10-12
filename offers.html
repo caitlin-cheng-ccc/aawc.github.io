@@ -560,7 +560,8 @@
             </div>
         </div>
         <div class="footer-bottom">
-            <span>&copy; 2026 Advanced Aesthetics &amp; Wellness Center. All rights reserved.</span>
+            <span>&copy; <span class="footer-year">2026</span> Abington Aesthetics &amp; Wellness Center. All rights reserved.</span>
+            <script>document.querySelectorAll(".footer-year").forEach(function (el) { el.textContent = new Date().getFullYear(); });</script>
             <span>Designed with care.</span>
         </div>
     </footer>
