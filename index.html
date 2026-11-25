@@ -648,28 +648,27 @@
 
     </style>
     <link rel="stylesheet" href="mobile.css">
-    <link rel="stylesheet" href="fall-offer.css">
+    <link rel="stylesheet" href="holiday-offer.css">
     <script src="mobile.js" defer></script>
-    <script src="fall-offer.js" defer></script>
+    <script src="holiday-offer.js" defer></script>
 </head>
 <body>
-    <dialog class="fall-offer" id="fall-offer" aria-labelledby="fall-offer-title" aria-describedby="fall-offer-description">
-        <button class="fall-offer-close" type="button" aria-label="Close offer and view home page" data-close-offer>&times;</button>
-        <div class="fall-offer-card" tabindex="-1" autofocus>
-            <div class="fall-offer-leaves" aria-hidden="true">
-                <span>🍁</span><span>🍂</span><span>🍁</span><span>🍂</span><span>🍁</span><span>🍂</span>
+    <!-- Seasonal offer popup: flyer, title, colors and falling leaves/snow are chosen by date in holiday-offer.js -->
+    <dialog class="holiday-offer" id="holiday-offer" aria-labelledby="holiday-offer-title" aria-describedby="holiday-offer-description">
+        <button class="holiday-offer-close" type="button" aria-label="Close offer and view home page" data-close-offer>&times;</button>
+        <div class="holiday-offer-card" tabindex="-1" autofocus>
+            <div class="holiday-offer-particles" aria-hidden="true"></div>
+            <div class="holiday-offer-header">
+                <span class="holiday-offer-eyebrow"></span>
+                <h2 id="holiday-offer-title"></h2>
             </div>
-            <div class="fall-offer-header">
-                <span class="fall-offer-eyebrow">A seasonal invitation</span>
-                <h2 id="fall-offer-title">Fall Transformation Special</h2>
+            <div class="holiday-offer-art">
+                <img id="holiday-offer-description" alt="">
             </div>
-            <div class="fall-offer-art">
-                <img src="images/1000283043.webp" width="1024" height="1318" alt="Fall in love with you: T-Shape 2 fall transformation special with 6 and 12 session packages for body treatments and facial treatments, with fall special pricing through November 30." id="fall-offer-description">
-            </div>
-            <div class="fall-offer-footer">
-                <a class="fall-offer-book" href="https://practice.chirotouch.com/portal/comprehensiveChiropracticandRehabInc" target="_blank" rel="noopener noreferrer">
-                    <span class="fall-offer-book-label">Book Now</span>
-                    <span class="fall-offer-arrows" aria-hidden="true">
+            <div class="holiday-offer-footer">
+                <a class="holiday-offer-book" href="https://practice.chirotouch.com/portal/comprehensiveChiropracticandRehabInc" target="_blank" rel="noopener noreferrer">
+                    <span class="holiday-offer-book-label">Book Now</span>
+                    <span class="holiday-offer-arrows" aria-hidden="true">
                         <svg viewBox="0 0 10 16"><path d="M2 2l6 6-6 6"/></svg>
                         <svg viewBox="0 0 10 16"><path d="M2 2l6 6-6 6"/></svg>
                         <svg viewBox="0 0 10 16"><path d="M2 2l6 6-6 6"/></svg>
@@ -1082,5 +1081,6 @@
             }
         });
     </script>
+    <script src="https://widgets.leadconnectorhq.com/loader.js" data-resources-url="https://widgets.leadconnectorhq.com/chat-widget/loader.js" data-widget-id="6b03f59fe6cd500e96f5fcef"></script>
 </body>
 </html>
